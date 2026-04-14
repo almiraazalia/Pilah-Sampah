@@ -1,0 +1,26 @@
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; background-color: #e0f7fa; overflow: hidden; }
+
+.game-area { width: 100vw; height: 100vh; position: relative; }
+
+.header { position: absolute; top: 10px; width: 100%; display: flex; justify-content: space-around; font-size: 1.5rem; font-weight: bold; color: #006064; z-index: 10; }
+
+/* Styling Sampah */
+.garbage { width: 50px; height: 50px; background-size: cover; position: absolute; top: -60px; /* Mulai dari luar layar atas */ border-radius: 50%; box-shadow: 0 4px 8px rgba(0,0,0,0.2); }
+
+/* Styling Tempat Sampah */
+.bins-container { position: absolute; bottom: 0; width: 100%; height: 15vh; display: flex; }
+.bin { flex: 1; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 1.2rem; text-align: center; border-top-left-radius: 15px; border-top-right-radius: 15px; transition: transform 0.2s; }
+
+/* Warna Tempat Sampah */
+.bin-organic { background-color: #4caf50; /* Hijau */ border: 4px solid #388e3c; }
+.bin-plastic { background-color: #2196f3; /* Biru */ border: 4px solid #1976d2; }
+
+/* Efek saat tong sampah dipilih (dipindah) */
+.bin.active { transform: translateY(-10px) scale(1.05); }
+
+/* Popup Game Over */
+.hidden { display: none !important; }
+#gameover-popup { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); display: flex; justify-content: center; align-items: center; z-index: 100; }
+.popup-content { background: white; padding: 2rem; border-radius: 15px; text-align: center; }
+.popup-content form input { padding: 10px; width: 80%; margin-bottom: 10px; }
+.popup-content button { padding: 10px 20px; background-color: #006064; color: white; border: none; border-radius: 5px; cursor: pointer; }
